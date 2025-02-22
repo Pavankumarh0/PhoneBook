@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneBook 3D</title>
+    <link rel="stylesheet" href="poster.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Phone<span class="highlight">Book</span> <span class="animated"></span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#add">Add Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h2>Its phonebook</h2>
+            <p>Contact anyone you want.</p>
+            <div class="hero-3d">
+                <img src="phonebook-removebg-preview.png" alt="3D Phone" class="phone-rotate">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact List Section -->
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <h2>Contact List</h2>
+            <input type="text" id="search" class="search-bar" placeholder="Search Contacts...">
+            <div class="contact-list">
+                <!-- Contact cards will be dynamically generated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Contact Section -->
+    <section id="add" class="add-contact-section">
+        <div class="container">
+            <h2>Add a New Contact</h2>
+            <form id="addContactForm" class="contact-form">
+                <input type="text" id="name" class="Name" placeholder="Name" required><br>
+                <input type="tel" id="phone" class="phone" placeholder="Phone Number" required><br>
+                <button type="submit" class="add">Add Contact</button>
+            </form>
+        </div>
+    </section>
+    <!-- Dial Pad Section -->
+    <section id="dialpad" class="dialpad-section">
+        <div class="container">
+            <h2>Dial Pad</h2>
+            <div class="dialpad">
+                <div class="dial-row">
+                    <button class="dial-btn">1</button>
+                    <button class="dial-btn">2</button>
+                    <button class="dial-btn">3</button>
+                </div>
+                <div class="dial-row">
+                    <button class="dial-btn">4</button>
+                    <button class="dial-btn">5</button>
+                    <button class="dial-btn">6</button>
+                </div>
+                <div class="dial-row">
+                    <button class="dial-btn">7</button>
+                    <button class="dial-btn">8</button>
+                    <button class="dial-btn">9</button>
+                </div>
+                <div class="dial-row">
+                    <button class="dial-btn">*</button>
+                    <button class="dial-btn">0</button>
+                    <button class="dial-btn">#</button>
+                </div>
+                <!-- Added delete button -->
+                <div class="dial-row">
+                    <button id="delete-button" class="delete-btn">Delete</button>
+                </div>
+                <button id="dial-button" class="dial-button">Dial</button>
+                <p id="dial-message" class="dial-message"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 PhoneBook 3D. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="poster.js"></script>
+</body>
+</html>
+
